@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <!-- Progress Bar Slider -->
+    <widget id="progress_bar_slider" class="Slider\Widget\Block\Widgets\SliderMultiField"
+            placeholder_image="Slider_Widget::images/multifield.png">
+        <label translate="true">Progress Bar Slider</label>
+        <description translate="true">Progress Bar Slider</description>
+        <parameters>
+            <parameter name="slider_multi_field_content_admin_title" xsi:type="block" required="false" visible="true"
+                       sort_order="0">
+                <description>
+                    <![CDATA[<hr style="margin:40px 0;" /><h1 style="text-align: left; margin: 40px 0">Content</h1>]]></description>
+                <block class="Slider\Widget\Block\Adminhtml\Renderer\WidgetSectionTitle"/>
+            </parameter>
+            <parameter name="slider_multi_field_class" sort_order="20" visible="true" xsi:type="text">
+                <label>Slider Widget Class</label>
+            </parameter>
+            <parameter name="slider_multi_field_steps" xsi:type="block" sort_order="40" required="false" visible="true">
+                <label translate="true">Steps</label>
+                <block class="Slider\Widget\Block\Adminhtml\SliderMultiField"/>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

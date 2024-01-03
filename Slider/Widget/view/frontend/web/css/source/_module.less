@@ -1,0 +1,242 @@
+.cms-home .sections.nav-sections {
+    z-index: 1;
+}
+
+.sliderContainer {
+    position: relative;
+
+    .slider {
+        width: 100%;
+        margin: 0;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        color: black;
+    }
+
+    .slick-dots {
+        bottom: -30px;
+    }
+
+    .slick-slider {
+        padding: 0;
+    }
+
+    .slick-slide {
+        position: relative;
+    }
+
+    a:hover::after {
+        transform: translateY(-100%);
+    }
+
+    .slick-slide img {
+        width: 100%;
+    }
+    .slidertest {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 6;
+        visibility: visible;
+        width: 100%;
+        height: 100%;
+        transition: visibility 0.5s;
+        margin: 54px 0 0;
+        text-align: center;
+
+        h1,
+        h2 {
+            font-family: 'Inter-s';
+            color: #24cddf;
+            font-size: 72px;
+            font-weight: 600;
+            line-height: 80px;
+            letter-spacing: -3px;
+        }
+
+        .tl {
+            padding: 29px 0 41px 0;
+            color: #cccdd7;
+        }
+
+        a {
+            border: 0;
+            font-family: 'Inter-m';
+            color: #1d1d1f;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: 0;
+            padding: 0 16px;
+            min-width: 160px;
+            height: 48px;
+            background-color: #ffffff;
+            box-shadow: none;
+            -moz-box-shadow: none;
+            -webkit-box-shadow: none;
+            -ms-box-shadow: none;
+            -o-box-shadow: none;
+            border-radius: 48px;
+            -moz-border-radius: 48px;
+            -webkit-border-radius: 48px;
+            -ms-border-radius: 48px;
+            -o-border-radius: 48px;
+            position: relative;
+            overflow: hidden;
+            width: 240px;
+            display: inline-block;
+
+            &:after {
+                content: attr(title);
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition-property: transform;
+                transition-duration: 0.7s;
+                transform: translateY(0);
+                visibility: visible;
+            }
+
+            &:hover {
+                background-color: #ffffff;
+
+                span {
+                    transform: translateY(-100%);
+                }
+            }
+
+            span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition-property: transform;
+                transition-duration: 0.7s;
+                transform: translateY(0);
+                visibility: visible;
+            }
+        }
+
+        a[disabled] {
+            background-color: rgba(255, 255, 255, 0.16);
+            color: #86868b;
+            cursor: not-allowed;
+
+            &:hover {
+                cursor: not-allowed;
+            }
+        }
+    }
+    .slider.single-item > div + div {
+        display: none;
+    }
+    @media screen and (max-width: 1024px){
+        .sliderContainer {
+            .slidertest {
+                 h1,
+                 h2{
+                    font-family: 'Inter-s';
+                    color: #1d1d1f;
+                    font-size: 32px;
+                    font-weight: 600;
+                    line-height: 40px;
+                    letter-spacing: 0;
+                    color: #24cddf;
+                }
+                p{
+                    font-family: 'Inter-s';
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 28px;
+                    letter-spacing: 0;
+                    margin: 19px auto 29px auto;
+                    color: #cccdd7;
+                    max-width: 316px;
+                }
+
+                a{
+                    border: 0;
+                    font-family: 'Inter-m';
+                    color: #1d1d1f;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 24px;
+                    letter-spacing: 0;
+                    padding: 0 16px;
+                    width: 240px;
+                    height: 48px;
+                    background-color: #fff;
+                    box-shadow: none;
+                    -moz-box-shadow: none;
+                    -webkit-box-shadow: none;
+                    -ms-box-shadow: none;
+                    -o-box-shadow: none;
+                    border-radius: 48px;
+                    -moz-border-radius: 48px;
+                    -webkit-border-radius: 48px;
+                    -ms-border-radius: 48px;
+                    -o-border-radius: 48px;
+                    position: relative;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+.progressBarContainer {
+    position: absolute;
+    bottom: 30px;
+    width: 504px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+
+    > div {
+        display: block;
+        width: 30%;
+        padding: 0;
+        cursor: pointer;
+        margin-right: 5%;
+        float: left;
+        color: white;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        span.progressBar {
+            width: 100%;
+            height: 4px;
+            background-color: rgba(255, 255, 255, 0.4);
+            display: block;
+
+            .inProgress {
+                background-color: #1FC2DE;
+                width: 0%;
+                height: 4px;
+            }
+        }
+    }
+}
